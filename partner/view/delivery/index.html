@@ -1,0 +1,129 @@
+<div id="page-wrapper" style="display:none">
+<link href="../assets/css/dataTables.bootstrap.css" rel="stylesheet">
+    
+    <div class="container-fluid">
+
+        <!-- Page Heading -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">
+                    Deliveries
+                </h1>
+            </div>
+        </div>
+
+        <div class="col-md-12" id="result_msg" ng-show="display_result">
+            <div ng-class="{'alert alert-success': success, 'alert alert-danger': failed}">
+                {{result_msg}} 
+            </div>
+        </div>
+        <!--
+        <div class="alert alert-info alert-dismissible">
+            <span class="close" data-dismiss="alert" aria-label="close">&times;</span>
+            <i class="fa fa-info-circle"></i> Discribe this page and give the user an idea on how to use it. <strong><a href="video.url">Click here (Video Tutorial)</a></strong>
+        </div>
+        -->
+        
+    <form method="POST">
+    <div class="row">
+        <div class="col-lg-12">
+
+                
+                <div class="col-lg-12"><br/></div>
+                
+                <div class="col-lg-12">
+                    <div class="button-group">
+                        <!--
+                        <button class="btn btn-success dropdown-toggle" type="button" data-toggle="dropdown">New
+                        <span class="caret"></span></button>
+                        <ul class="dropdown-menu">
+                            <li><a href="#partner/add">Add New Partner</a></li>
+                            <li><a href="#partner/import">Import from Excel</a></li>
+                        </ul>
+                        -->
+                    
+                        <a href="#delivery/add"><button id="btn_new_deliverytransaction" class="btn btn-success" type="button">New Transaction</button></a>
+                        <!--
+                        <input type="button" id="btn_update" class="btn btn-primary" ng-disabled="cbSelected" ng-click="multiupdate()" value="Update">
+                        <input type="button" id="btn_delete" class="btn btn-danger" ng-disabled="cbSelected" ng-click="multidelete()" value="Delete">
+                        <input type="button" id="btn_export" class="btn btn-warning" ng-click="export()" value="Export">
+                        -->
+                    </div>
+                </div>
+                
+                <div class="col-lg-12"><br/></div>
+                
+                <div class="col-lg-12 custom_tbl" id="mySalesTransaction">
+                    <table id="tbl_records" class="table table-striped table-bordered table-responsive" cellspacing="0" cellpadding="0" width="100%">
+                        <thead>
+                        <tr>
+                            <td class="text-center">ID</td>
+                            <td class="text-center">Date Created</td>
+                            <td class="text-center">Total Qty</td>
+                            <td class="text-center">Total Amount</td>
+                            <td class="text-center">Date Posted</td>
+                            <td class="text-center">Status</td>
+                            <td class="text-center">Action</td>
+                        </tr>
+                        </thead>
+                        <tbody id="tb_records">
+                        <tr ng-repeat="val in deliveries">
+                            <td class="c-tbl-col text-center">{{ val.delivery_id }}</td>
+                            <td class="c-tbl-col text-center">{{ val.date_created | date : "MMM dd, yyyy" }}</td>
+                            <td class="c-tbl-col text-center">{{ val.total_qty }}</td>
+                            <td class="c-tbl-col text-right">{{ val.total_amt | currency:'P ' }}</td>
+
+                            <td class="c-tbl-col text-center">
+                                <span ng-if="val.date_posted != '0000-00-00'">{{  val.date_posted | date : "MMM dd, yyyy" }}</span>
+                            </td>
+                            <td class="c-tbl-col text-center" ng-class="{'alert-danger': val.status == 'Cancelled', 'alert-warning': val.status == 'Pending', 'alert-success': val.status == 'Posted', 'alert-info': val.status == 'Draft' }" >{{ val.status }}</td>
+                            <td class="c-tbl-action text-center">
+                                <!-- if Draft (V, E, D); if Posted (V); if Pending (V, C); if Cancelled (V, D) -->
+                                <span class="sp-tbl-action" title="View" ng-click="single_action('r', val.delivery_id)"><i class="fa fa-search"></i></span>
+                                <span ng-if="val.status == 'Draft'" class="sp-tbl-action" title="Edit" ng-click="single_action('u', val.delivery_id)"><i class="fa fa-pencil"></i></span>
+                                <span ng-if="val.status == 'Draft' || val.status == 'Cancelled'" class="sp-tbl-action" title="Delete" ng-click="single_action('d', val.delivery_id)"><i class="fa fa-trash"></i></span>
+                                <span ng-if="val.status == 'Pending'" class="sp-tbl-action" title="Cancel" ng-click="single_action('c', val.delivery_id)"><i class="fa fa-remove"></i></span>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="col-lg-12"><br/><br/></div>
+            
+                <!--
+                <div class="col-md-12" id="result_msg" ng-show="display_result">
+                    <div ng-class="{'alert alert-success': success, 'alert alert-danger': failed}">
+                        {{result_msg}} 
+                    </div>
+                </div>
+                -->
+                
+            </div>
+            
+            <div class="col-lg-12"><br/><br/></div>
+
+
+    </div>
+    </form>
+    </div>
+
+</div>
+
+<script src="../assets/js/jquery.dataTables.min.js"></script>
+<script src="../assets/js/dataTables.bootstrap.js"></script>
+<!--
+<script src="../assets/js/exportjs/xlsx.core.min.js"></script>
+<script src="../assets/js/exportjs/blob.js"></script>
+<script src="../assets/js/exportjs/filesaver.js"></script>
+<script src="../assets/js/exportjs/tableexport.js"></script>
+<script type="text/javascript">
+    
+    $("#btn_export").click(function(){
+        $("#mySalesTransaction").tableExport({formats: ["xlsx"], fileName: 'My Sales Transactions - ' + getYmdate()});
+        $(".xlsx").click();
+        $(".xlsx_caption").remove();
+    });
+
+</script>
+-->

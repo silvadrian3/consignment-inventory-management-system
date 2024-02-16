@@ -1,0 +1,48 @@
+[29-May-2017 22:09:05 Asia/Manila] PHP Notice:  Use of undefined constant query - assumed 'query' in /home/adr1ankleveraft/public_html/app/api/v1/check_exist.php on line 37
+[29-May-2017 22:19:57 Asia/Manila] PHP Notice:  Undefined variable: out in /home/adr1ankleveraft/public_html/app/api/v1/deliveries.php on line 110
+[29-May-2017 22:20:03 Asia/Manila] PHP Warning:  mysqli_connect(): (HY000/2002): Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (2) in /home/adr1ankleveraft/public_html/app/api/ctrl/con.php on line 11
+[29-May-2017 22:20:03 Asia/Manila] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/adr1ankleveraft/public_html/app/api/ctrl/con.php on line 13
+[31-May-2017 00:15:57 Asia/Manila] PHP Notice:  Undefined variable: qresult in /home/adr1ankleveraft/public_html/app/api/v1/category.php on line 123
+[31-May-2017 00:16:09 Asia/Manila] PHP Notice:  Undefined variable: qresult in /home/adr1ankleveraft/public_html/app/api/v1/category.php on line 123
+[31-May-2017 00:26:17 Asia/Manila] PHP Notice:  Undefined variable: qresult in /home/adr1ankleveraft/public_html/app/api/v1/category.php on line 123
+[02-Jun-2017 18:57:09 Asia/Manila] PHP Notice:  Undefined variable: out in /home/adr1ankleveraft/public_html/app/api/v1/sales.php on line 122
+[05-Jun-2017 11:12:45 Asia/Manila] PHP Notice:  Undefined index: username in /home/adr1ankleveraft/public_html/app/api/v1/login.php on line 27
+[16-Aug-2017 04:59:24 Asia/Manila] PHP Notice:  Undefined index: password in /home/adr1ankleveraft/public_html/app/api/v1/login.php on line 28
+[22-Aug-2017 23:28:22 Asia/Manila] PHP Notice:  Undefined index: password in /home/adr1ankleveraft/public_html/app/api/v1/login.php on line 28
+[22-Aug-2017 23:28:22 Asia/Manila] PHP Notice:  Undefined index: password in /home/adr1ankleveraft/public_html/app/api/v1/login.php on line 28
+[22-Aug-2017 23:28:42 Asia/Manila] PHP Notice:  Undefined index: password in /home/adr1ankleveraft/public_html/app/api/v1/login.php on line 28
+[22-Aug-2017 23:28:46 Asia/Manila] PHP Notice:  Undefined index: password in /home/adr1ankleveraft/public_html/app/api/v1/login.php on line 28
+[08-Sep-2017 15:46:41 Asia/Manila] PHP Notice:  Undefined index: username in /home/adr1ankleveraft/public_html/app/api/v1/login.php on line 27
+[08-Sep-2017 15:46:41 Asia/Manila] PHP Notice:  Undefined index: password in /home/adr1ankleveraft/public_html/app/api/v1/login.php on line 28
+[08-Sep-2017 15:46:49 Asia/Manila] PHP Notice:  Undefined index: password in /home/adr1ankleveraft/public_html/app/api/v1/login.php on line 28
+[08-Sep-2017 23:27:20 Asia/Manila] PHP Notice:  Undefined index: username in /home/adr1ankleveraft/public_html/app/api/v1/login.php on line 27
+[08-Sep-2017 23:27:28 Asia/Manila] PHP Notice:  Undefined index: username in /home/adr1ankleveraft/public_html/app/api/v1/login.php on line 27
+[08-Sep-2017 23:27:43 Asia/Manila] PHP Notice:  Undefined index: username in /home/adr1ankleveraft/public_html/app/api/v1/login.php on line 27
+[08-Sep-2017 23:28:07 Asia/Manila] PHP Notice:  Undefined index: username in /home/adr1ankleveraft/public_html/app/api/v1/login.php on line 27
+[08-Sep-2017 23:28:08 Asia/Manila] PHP Notice:  Undefined index: username in /home/adr1ankleveraft/public_html/app/api/v1/login.php on line 27
+[08-Sep-2017 23:28:13 Asia/Manila] PHP Notice:  Undefined index: username in /home/adr1ankleveraft/public_html/app/api/v1/login.php on line 27
+[08-Sep-2017 23:28:31 Asia/Manila] PHP Notice:  Undefined index: username in /home/adr1ankleveraft/public_html/app/api/v1/login.php on line 27
+[11-Sep-2017 11:35:12 Asia/Manila] PHP Notice:  Undefined index: password in /home/adr1ankleveraft/public_html/app/api/v1/login.php on line 28
+[11-Sep-2017 20:55:03 Asia/Manila] PHP Notice:  Undefined index: password in /home/adr1ankleveraft/public_html/app/api/v1/login.php on line 28
+[17-Sep-2017 20:32:51 Asia/Manila] PHP Notice:  Undefined index: username in /home/adr1ankleveraft/public_html/app/api/v1/login.php on line 27
+[17-Sep-2017 20:32:51 Asia/Manila] PHP Notice:  Undefined index: password in /home/adr1ankleveraft/public_html/app/api/v1/login.php on line 28
+[17-Sep-2017 20:33:04 Asia/Manila] PHP Notice:  Undefined index: password in /home/adr1ankleveraft/public_html/app/api/v1/login.php on line 28
+[24-Sep-2017 07:36:39 Asia/Manila] PHP Notice:  Undefined index: username in /home/adr1ankleveraft/public_html/app/api/v1/login.php on line 27
+[03-Oct-2017 12:11:02 Asia/Manila] PHP Notice:  Undefined index: password in /home/adr1ankleveraft/public_html/app/api/v1/login.php on line 28
+[03-Oct-2017 13:24:45 Asia/Manila] PHP Notice:  Undefined index: password in /home/adr1ankleveraft/public_html/app/api/v1/login.php on line 28
+[03-Oct-2017 22:37:45 Asia/Manila] PHP Warning:  mysqli_connect(): (HY000/2002): Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (2) in /home/adr1ankleveraft/public_html/app/api/ctrl/con.php on line 12
+[03-Oct-2017 22:37:45 Asia/Manila] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/adr1ankleveraft/public_html/app/api/ctrl/con.php on line 14
+[17-Oct-2017 00:44:36 Asia/Manila] PHP Notice:  Undefined index: password in /home/adr1ankleveraft/public_html/app/api/v1/login.php on line 28
+[17-Oct-2017 23:29:48 Asia/Manila] PHP Notice:  Undefined index: password in /home/adr1ankleveraft/public_html/app/api/v1/login.php on line 28
+[18-Oct-2017 01:48:16 Asia/Manila] PHP Notice:  Undefined index: password in /home/adr1ankleveraft/public_html/app/api/v1/login.php on line 28
+[18-Oct-2017 21:24:52 Asia/Manila] PHP Notice:  Undefined index: password in /home/adr1ankleveraft/public_html/app/api/v1/login.php on line 28
+[29-Nov-2017 12:55:55 Asia/Manila] PHP Notice:  Undefined variable: out in /home/adr1ankleveraft/public_html/app/api/v1/sales.php on line 174
+[29-Nov-2017 13:05:15 Asia/Manila] PHP Notice:  Undefined variable: out in /home/adr1ankleveraft/public_html/app/api/v1/sales.php on line 174
+[29-Nov-2017 13:05:48 Asia/Manila] PHP Notice:  Undefined variable: out in /home/adr1ankleveraft/public_html/app/api/v1/sales.php on line 174
+[29-Nov-2017 13:06:32 Asia/Manila] PHP Notice:  Undefined variable: out in /home/adr1ankleveraft/public_html/app/api/v1/sales.php on line 174
+[20-Dec-2017 18:43:19 Asia/Manila] PHP Notice:  Undefined variable: out in /home/adr1ankleveraft/public_html/app/api/v1/sales.php on line 174
+[20-Dec-2017 19:15:35 Asia/Manila] PHP Notice:  Undefined variable: out in /home/adr1ankleveraft/public_html/app/api/v1/sales.php on line 174
+[25-Dec-2017 18:11:25 Asia/Manila] PHP Notice:  Undefined variable: out in /home/adr1ankleveraft/public_html/app/api/v1/sales.php on line 174
+[02-Jan-2018 19:34:55 Asia/Manila] PHP Notice:  Undefined variable: out in /home/adr1ankleveraft/public_html/app/api/v1/sales.php on line 174
+[02-Jan-2018 19:36:01 Asia/Manila] PHP Notice:  Undefined variable: out in /home/adr1ankleveraft/public_html/app/api/v1/sales.php on line 174
+[02-Jan-2018 19:36:55 Asia/Manila] PHP Notice:  Undefined variable: out in /home/adr1ankleveraft/public_html/app/api/v1/sales.php on line 174

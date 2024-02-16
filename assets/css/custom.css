@@ -1,0 +1,586 @@
+@charset "utf-8";
+
+img, object, embed, video {
+  max-width: 100%;
+}
+
+.ie6 img {
+  width: 100%;
+}
+
+.fluid {
+  clear: both;
+  margin-left: 0;
+  width: 100%;
+  float: left;
+  display: block;
+}
+
+.fluidList {
+  list-style: none;
+  list-style-image: none;
+  margin: 0;
+  padding: 0;
+}
+
+.glyphicon-refresh-animate {
+  -animation: spin .7s infinite linear;
+  -ms-animation: spin .7s infinite linear;
+  -webkit-animation: spinw .7s infinite linear;
+  -moz-animation: spinm .7s infinite linear;
+}
+
+@  keyframes spin {
+
+  from {
+    transform: scale(1) rotate(0deg);
+  }
+
+  to {
+    transform: scale(1) rotate(360deg);
+  }
+}
+
+@-webkit-keyframes spinw {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@-moz-keyframes spinm {
+  from {
+    -moz-transform: rotate(0deg);
+  }
+
+  to {
+    -moz-transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width:480px) {
+ /**mobile**/;
+  body {
+    margin-top: 100px;
+    background-color: #FFF;
+  }
+
+
+/*************** Start - Log-in Page ***************/
+  .c-li-container {
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .c-li-inner-container {
+    margin: 2% 0;
+    padding: 5%;
+  }
+
+  .c-li-inner-container .c-li-header img {
+    margin: auto;
+    padding-bottom: 5%;
+  }
+
+  .c-li-textfield {
+    height: 40px;
+    outline: none;
+  }
+
+  .c-li-form {
+    padding: 2% 5% 4% 5%;
+    background-color: #FFF;
+    margin-bottom: 5%;
+    border: solid 1px #ddd;
+    border-radius: 3px 3px 3px 3px;
+  }
+
+  #div_login_status {
+    padding: 2%;
+    margin-bottom: 4%;
+    display: inline-block;
+  }
+
+/*************** End - Log-in Page ***************/
+
+  .blackout-page-load {
+    opacity: .7;
+    background-color: #000;
+    filter: alpha(opacity=70);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9000000;
+  }
+
+  .page-load {
+    text-align: center;
+        /**font-size: 18px;**/
+    background-color: #FFF;
+    border: 1px solid #ccc;
+    color: #337ab7;
+    width: 80%;
+    height: 25%;
+    position: fixed;
+    top: 36%;
+    left: 5%;
+    border-radius: 2px;
+    padding: 15% 5% 5% 5%;
+    z-index: 9000001;
+    margin-left: 5%;
+  }
+
+  .top-space span {
+    color: #FF0000;
+  }
+
+  #btn_print {
+    display: none;
+  }
+
+  #tbl_records_length {
+    display: none;
+  }
+
+  #tbl_records_filter {
+    text-align: left;
+    margin: 5% 0 5% -15px;
+  }
+
+  .categories .btn {
+    margin: 3% 1% 0 0;
+  }
+
+  #btn_change {
+    display: block;
+    margin-top: 5%;
+  }
+
+  h1 {
+    font-size: 1.7em !important;
+  }
+
+  .page-header{
+    margin-top:40%;
+  }
+
+  #btn_new_deliverytransaction, #btn_new_salestransaction {
+    display:none;
+  }
+}
+
+@media only screen and (max-width:768px) and (min-width : 481px) {
+    /**tablet**/;
+}
+
+@media only screen and (min-width:769px) {
+ /**desktop**/
+  body {
+    background-color: #FFF;
+  }
+
+  #div_btn_change {
+    margin-top: 5%;
+  }
+
+  .multipleupdate_odd {
+    background-color: #FFFFFF;
+    float: left;
+    padding: 35px 0 25px 0;
+    margin: 0 -10px;
+  }
+
+  .multipleupdate_even {
+    background-color: #F0F0F0;
+    float: left;
+    padding: 35px 0 25px 0;
+    margin: 0 -10px;
+  }
+
+  .blackout-page-load {
+    opacity: .7;
+    background-color: #000;
+    filter: alpha(opacity=70);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100000;
+  }
+
+  .page-load {
+    text-align: center;
+    /**font-size: 18px;**/
+    background-color: #FFF;
+    border: 1px solid #ccc;
+    color: #337ab7;
+    width: 30%;
+    height: 25%;
+    position: fixed;
+    top: 36%;
+    left: 24.8%;
+    border-radius: 2px;
+    padding: 5%;
+    z-index: 100001;
+    margin-left: 10%;
+  }
+
+  .formula-page {
+    background-color: #FFF;
+    border: 1px solid #ccc;
+    width: 60%;
+    height: 70%;
+    position: fixed;
+    top: 16%;
+    left: 8%;
+    border-radius: 2px;
+    padding: 2%;
+    z-index: 100001;
+    margin-left: 12%;
+  }
+
+  .clrcol {
+    color: #FFF;
+    pointer-events: none;
+  }
+
+  #container, #custom-alert {
+    display: none;
+  }
+
+/*************** Start - Log-in Page ***************/
+  .c-li-container {
+    margin: 0 auto;
+    width: 40%;
+  }
+
+  .c-li-inner-container {
+    margin: 10% 0;
+    padding: 5% 8%;
+  }
+
+  .c-li-inner-container .c-li-header img {
+    margin: auto;
+    /**padding-bottom: 5%;*/
+  }
+
+  .c-li-textfield {
+    height: 40px;
+    outline: none;
+  }
+
+  .c-li-form {
+    padding: 2% 5% 4% 5%;
+    background-color: #FFF;
+    margin-bottom: 5%;
+    border: solid 1px #ddd;
+    border-radius: 3px 3px 3px 3px;
+  }
+
+  #div_login_status {
+    padding: 2%;
+    margin-bottom: 4%;
+    display: inline-block;
+  }
+
+/*************** End - Log-in Page ***************/
+
+/*************** Start - Sign-up Page ***************/
+  .c-su-container {
+    margin: 0 auto;
+    width: 40%;
+  }
+
+  .c-su-inner-container {
+    margin: 10% 0;
+    padding: 5% 8%;
+  }
+
+  .c-su-inner-container .c-su-header img {
+    margin: auto;
+    /**padding-bottom: 5%;*/
+  }
+
+  .c-su-textfield {
+    height: 40px;
+    outline: none;
+  }
+
+  .c-su-form {
+    padding: 2% 5% 4% 5%;
+    background-color: #FFF;
+    margin-bottom: 5%;
+    border: solid 1px #ddd;
+    border-radius: 3px 3px 3px 3px;
+  }
+
+  #div_signup_status {
+    padding: 2%;
+    display: inline-block;
+  }
+
+/*************** End - Sign-up Page ***************/
+
+/*************** Start - Forgot Password Page ***************/
+  .c-fp-container {
+    margin: 0 auto;
+    width: 40%;
+  }
+
+  .c-fp-inner-container {
+    margin: 10% 0;
+    padding: 5% 8%;
+  }
+
+  .c-fp-inner-container .c-fp-header img {
+    margin: auto;
+    /**padding-bottom: 5%;*/
+  }
+
+  .c-fp-textfield {
+    height: 40px;
+    outline: none;
+  }
+
+  .c-fp-form {
+    padding: 2% 5% 4% 5%;
+    background-color: #FFF;
+    margin-bottom: 5%;
+    border: solid 1px #ddd;
+    border-radius: 3px 3px 3px 3px;
+  }
+
+  #div_forgotpass_status {
+    padding: 2%;
+    display: inline-block;
+  }
+
+/*************** End - Forgot Password Page ***************/
+
+  #div_status {
+    padding: 2%;
+    display: inline-block;
+  }
+
+/*************** Start - Account Approval Page ***************/
+  .c-aa-container {
+    margin: 0 auto;
+    width: 80%;
+  }
+
+  .c-aa-inner-container {
+    margin: 5% 0;
+    padding: 5% 8%;
+  }
+
+  .c-aa-inner-container .c-aa-header img {
+    margin: auto;
+    padding-bottom: 5%;
+  }
+
+  .c-aa-form {
+    padding: 3.5% 2% 0 2%;
+    background-color: #FFF;
+    margin-bottom: 5%;
+    border: solid 1px #ddd;
+    border-radius: 3px 3px 3px 3px;
+  }
+
+  #div_login_status {
+    padding: 2%;
+    margin-bottom: 4%;
+    display: inline-block;
+  }
+
+/*************** End - Account Approval Page ***************/
+
+  .status {
+    padding: 1% 2%;
+    display: inline-block;
+  }
+
+  .usr_options {
+    cursor: pointer;
+  }
+/**
+.c-up-div, .bc-up-logo-div, .bc-up-banner-div, .p-up-logo-div, .t-up-logo-div, .c-up-logo-div, .add-p-up-logo-div, .add-c-up-logo-div, .add-t-up-logo-div {
+    padding: 1% 0;
+    display: none;
+}
+*/
+  .c-up-fileup {
+    margin-right: 2%;
+  }
+
+  .ico {
+    color: #337ab7;
+    cursor: pointer;
+    margin: 0 5px;
+  }
+
+  .act_ico {
+    color: #337ab7;
+    cursor: pointer;
+    margin: 0 1px;
+    text-align: center;
+  }
+
+  textarea {
+    resize: none;
+  }
+
+  .c-tbl-action {
+    width: 7%;
+    white-space: nowrap;
+  }
+
+  .c-tbl-cb {
+    width: 5%;
+    white-space: nowrap;
+  }
+
+  .sp-tbl-action {
+    text-align: center;
+    color: #337ab7;
+    cursor: pointer;
+    margin: 0 2%;
+  }
+
+  .sp-tbl-action:hover {
+    color: #23527c;
+  }
+
+  .c-tbl-col {
+    font-size: 12px;
+  }
+
+  .c-main-btn-actions {
+    margin-top: 10%;
+  }
+
+  .sp_addnew {
+    color: #337ab7;
+    cursor: pointer;
+  }
+
+  .export-btn {
+    margin: 0 0 0 0.5%;
+  }
+
+  .c-footer-details {
+    color: #555;
+    font-size: 14px;
+    text-align: center;
+    padding: 1%;
+    width: 100%;
+  }
+
+  .sm-field {
+    width: 50%;
+  }
+
+  .add-single-record, .add-import-record {
+    padding-top: 2%;
+    padding-bottom: 2%;
+  }
+
+  .mypanel {
+    cursor: pointer;
+  }
+
+  .xlsx {
+    display: none;
+  }
+
+  .xlsx_caption {
+    padding: 0px;
+  }
+
+  .cust-tbl-width {
+    margin: 1%;
+  }
+
+  .readonly-w {
+    background-color: #fff;
+  }
+
+  .hdReadonlyField {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border-radius: 4px;
+    border: 0px solid #FFF;
+    outline: none;
+  }
+
+  .top-space {
+    padding-top: 2.3%;
+  }
+
+  .top-space span {
+    color: #FF0000;
+  }
+
+  .custom_panel {
+    display: none;
+  }
+
+  .btn-calc {
+    margin-bottom: 5%;
+    width: 35px;
+  }
+
+  .calc-delete {
+    margin-bottom: 5%;
+    width: 75px;
+  }
+
+  .calc-operators {
+    font-weight: bold;
+  }
+
+  .panel-class {
+    cursor: pointer;
+  }
+
+  .panel-class-inactive {
+    cursor: not-allowed;
+    pointer-events: none;
+    opacity: 0.5;
+  }
+
+  .variablelist:hover {
+    cursor: pointer;
+    background-color: #F0F0F0;
+  }
+
+  .custom-col {
+    white-space: nowrap;
+    padding: 0 2%;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .noborder {
+    border: solid 0px transparent;
+    background-color: transparent;
+    outline: none;
+  }
+
+  #productlist {
+    padding: 15px;
+    color: aquamarine;
+  }
+}

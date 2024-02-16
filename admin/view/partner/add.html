@@ -1,0 +1,182 @@
+<div id="page-wrapper">
+
+    <div class="container-fluid">
+
+        <!-- Page Heading -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">
+                    New Partner
+                </h1>
+            </div>
+        </div>
+
+        <div class="col-md-12" id="result_msg" ng-show="display_result">
+            <div ng-class="{'alert alert-success': success, 'alert alert-danger': failed}">
+                {{result_msg}} 
+            </div>
+        </div>
+
+        <!--
+        <div class="alert alert-info alert-dismissible">
+            <span class="close" data-dismiss="alert" aria-label="close">&times;</span>
+            <i class="fa fa-info-circle"></i> Discribe this page and give the user an idea on how to use it. <strong><a href="video.url">Click here (Video Tutorial)</a></strong>
+        </div>
+        -->
+
+    <form method="POST" ng-submit="addPartner()">
+        <div class="row">
+            <div class="col-lg-12">
+
+                <div class="row">
+                    <div class="col-lg-12"><br/></div>
+
+                    <div class="col-lg-1"></div>
+
+                    <div class="col-lg-10">
+                        <div class="col-lg-12">
+                            <div class="form-group col-md-3">
+                                <p class="top-space">Partner Name <span>*</span></p>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <input type="text" id="name" ng-model="name" class="form-control" required ng-blur="checkPartnerExst()">
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12">
+                            <div class="form-group col-md-3">
+                                <p class="top-space">Address</p>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <textarea ng-model="address" class="form-control" rows="3"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12">
+                            <div class="form-group col-md-3">
+                                <p class="top-space">Email Address (Username) <span>*</span></p>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <input type="email" id="email" ng-model="email" class="form-control" required ng-blur="checkUserExst()">
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12">
+                            <div class="form-group col-md-3">
+                                <p class="top-space">Password <span>*</span></p>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <input type="password" ng-model="password" class="form-control" required>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12">
+                            <div class="form-group col-md-12">
+                                <hr/>
+                                <label>Partner Representative</label>
+                            </div>
+
+                            <div class="form-group col-md-3">
+                                <p class="top-space">First Name</p>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <input type="text" ng-model="representative_firstname" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12">
+                            <div class="form-group col-md-3">
+                                <p class="top-space">Last Name</p>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <input type="text" ng-model="representative_lastname" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12">
+                            <div class="form-group col-md-12">
+                                <hr/>
+                                <label>Contact Numbers</label>
+                            </div>
+
+                            <div class="form-group col-md-3">
+                                <p class="top-space">Phone Number</p>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <input type="text" ng-model="phone" class="form-control" onkeypress="validateContact(event)">
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12">
+                            <div class="form-group col-md-3">
+                                <p class="top-space">Mobile Number</p>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <input type="text" ng-model="mobile" class="form-control" onkeypress="validateContact(event)">
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12">
+                            <div class="form-group col-md-12">
+                                <hr/>
+                                <label>Social Media Pages</label>
+                            </div>
+
+                            <div class="form-group col-md-3">
+                                <p class="top-space">Facebook</p>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <input type="text" ng-model="facebook" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12">
+                            <div class="form-group col-md-3">
+                                <p class="top-space">Instagram</p>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <input type="text" ng-model="instagram" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12">
+                            <div class="form-group col-md-3">
+                                <p class="top-space">Twitter</p>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <input type="text" ng-model="twitter" class="form-control">
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-lg-1"></div>
+
+                    <div class="col-lg-12"><br/><br/><br/></div>
+
+                    <div class="col-lg-12 text-center">
+                        <div class="col-lg-4"></div>
+
+                        <div class="col-lg-2 form-group">
+                            <input type="submit" id="btn_save" class="btn btn-success btn-lg btn-block" value="Save">
+                        </div>
+
+                        <div class="col-lg-2 form-group">
+                            <input type="button" class="btn btn-warning btn-lg btn-block" value="Back to List" ng-click="gotoList()">
+                        </div>
+
+                        <div class="col-lg-4"></div>
+                    </div>
+
+                </div>
+
+                <div class="col-lg-12"><br/><br/></div>
+            </div>
+        </div>
+    </form>
+        <!-- /.row -->
+
+    </div>
+
+</div>
+

@@ -1,0 +1,163 @@
+<div id="page-wrapper">
+
+    <div class="container-fluid">
+
+        <!-- Page Heading -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">
+                    Update Delivery(s)
+                </h1>
+            </div>
+        </div>
+
+        <div class="col-md-12" id="result_msg" ng-show="display_result">
+            <div ng-class="{'alert alert-success': success, 'alert alert-danger': failed}">
+                {{result_msg}} 
+            </div>
+        </div>
+
+        <!--
+        <div class="alert alert-info alert-dismissible">
+            <span class="close" data-dismiss="alert" aria-label="close">&times;</span>
+            <i class="fa fa-info-circle"></i> Discribe this page and give the user an idea on how to use it. <strong><a href="video.url">Click here (Video Tutorial)</a></strong>
+        </div>
+        -->
+
+    <form method="POST" ng-submit="updateMultipleDelivery()">
+        <div class="row">
+            <div class="col-lg-12">
+
+                <div class="row" id="section-user-info">
+                    <div class="col-lg-12"><br/></div>
+
+                    <section ng-repeat="val in listdeliveries" ng-class-odd="'multipleupdate_odd'" ng-class-even="'multipleupdate_even'">
+
+                    <div class="col-lg-1"></div>
+
+                    <div class="col-lg-10">
+                        <div class="col-lg-12">
+                            <div class="form-group col-md-3">
+                                <p class="top-space">Delivery Name <span>*</span></p>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <input type="text" id="name_{{val.contact_id}}" value="{{val.name}}" class="form-control" required>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12">
+                            <div class="form-group col-md-3">
+                                <p class="top-space">Address</p>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <textarea id="address_{{val.contact_id}}" class="form-control" rows="3">{{val.address}}</textarea>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12">
+                            <div class="form-group col-md-3">
+                                <p class="top-space">Email Address</p>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <input type="email" id="email_{{val.contact_id}}" value="{{val.email}}" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12">
+                            <div class="form-group col-md-12">
+                                <hr/>
+                                <label>Delivery Representative</label>
+                            </div>
+
+                            <div class="form-group col-md-3">
+                                <p class="top-space">First Name</p>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <input type="text" id="firstname_{{val.contact_id}}" value="{{val.first_name}}" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12">
+                            <div class="form-group col-md-3">
+                                <p class="top-space">Last Name</p>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <input type="text" id="lastname_{{val.contact_id}}" value="{{val.last_name}}" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12">
+                            <div class="form-group col-md-12">
+                                <hr/>
+                                <label>Contact Numbers</label>
+                            </div>
+
+                            <div class="form-group col-md-3">
+                                <p class="top-space">Phone Number</p>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <input type="text" id="phone_{{val.contact_id}}" value="{{val.phone_no}}" class="form-control" onkeypress="validateContact(event)">
+                            </div>
+                        </div>
+
+
+                        <div class="col-lg-12">
+                            <div class="form-group col-md-3">
+                                <p class="top-space">Mobile Number</p>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <input type="text" id="mobile_{{val.contact_id}}" value="{{val.mobile_no}}" class="form-control" onkeypress="validateContact(event)">
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12">
+                            <div class="form-group col-md-3">
+                                <p class="top-space">Fax Number</p>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <input type="text" id="fax_{{val.contact_id}}" value="{{val.fax_no}}" class="form-control" onkeypress="validateContact(event)">
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-lg-1"></div>
+
+                    </section>
+
+                    <div class="col-lg-12"><br/><br/><br/></div>
+
+                    <div class="col-lg-12 text-center">
+                        <div class="col-lg-4"></div>
+
+                        <div class="col-lg-2 form-group">
+                            <input type="submit" class="btn btn-success btn-lg btn-block" value="Save">
+                        </div>
+                        <div class="col-lg-2 form-group">
+                            <input type="button" class="btn btn-danger btn-lg btn-block" value="Cancel" ng-click="gotoList()">
+                        </div>
+
+                        <div class="col-lg-4"></div>
+                    </div>
+
+                </div>
+
+                <div class="col-lg-12"><br/><br/></div>
+
+                <!--
+                <div class="col-md-12" id="result_msg" ng-show="display_result">
+                    <div ng-class="{'alert alert-success': success, 'alert alert-danger': failed}">
+                        {{result_msg}} 
+                    </div>
+                </div>
+                -->
+
+                <div class="col-lg-12"><br/></div>
+            </div>
+        </div>
+    </form>
+        <!-- /.row -->
+
+    </div>
+
+</div>

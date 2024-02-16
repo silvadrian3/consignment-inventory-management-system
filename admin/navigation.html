@@ -1,0 +1,30 @@
+<section>
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#/"><span style="color:#FFF">{{client_name}}</span></a>
+    </div>
+    
+    <ul class="nav navbar-right top-nav">
+        <li class="dropdown">
+            <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> {{firstname + ' ' + lastname}} <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+                <li>
+                    <a href="#profile"><i class="fa fa-fw fa-user"></i> Profile</a>
+                </li>
+                <!--
+                <li>
+                    <a href="#support"><i class="fa fa-fw fa-question-circle"></i> Help</a>
+                </li>
+                -->
+                <li>
+                    <a id="logout" class="usr_options" ng-click="logout()"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</section>

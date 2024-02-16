@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>KleveRaft - Inventory System</title>
+	<link rel="icon" type="image/png" href="../assets/css/favicon.png">
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../assets/css/general.css" rel="stylesheet">
+	<link href="../assets/css/custom.css" rel="stylesheet">
+    <!--<link href="assets/css/plugins/morris.css" rel="stylesheet">-->
+    <link href="../assets/css/jquery.datetimepicker.css" rel="stylesheet"></link>
+    <script src="../assets/js/jquery.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/jquery.datetimepicker.js"></script>
+    <!--<script src="//code.jquery.com/ui/1.11.1/jquery-ui.js"></script>-->
+    <script src="../assets/js/scripts.js"></script>
+    <script src="../assets/js/angular.min.js"></script>
+    <script src="../assets/js/angular-route.js"></script>
+    <script src="../assets/js/route.js"></script>
+    <script src="../assets/js/cookies.js"></script>
+    
+</head>
+
+<body ng-app="myApp">
+	<div id="page-load">
+		<div class="blackout-page-load"></div>
+		<div class="page-load">
+			<span class="glyphicon glyphicon-refresh glyphicon-refresh-animate"></span> Please wait...
+		</div>
+	</div>
+	
+	<div id="container" ng-controller="mainCtrl">
+		<div id="wrapper">
+
+			<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+
+                <section ng-include="'navigation.html'"></section>
+                
+                <section ng-include="'sidebar.html'"></section>
+
+			</nav>
+
+            <section ng-view></section>
+            
+            <div class="col-lg-12 text-center">
+                <hr/><p class="footer-details" style="padding-bottom:10px; font-size:12px"></p>
+            </div>
+		</div>
+		
+	</div>
+    
+    <script src="../assets/js/functions/ctrl.main.js"></script>
+    <script src="../assets/js/functions/ctrl.dashboard.js"></script>    
+    <script src="../assets/js/functions/ctrl.profile.js"></script>
+    <script src="../assets/js/functions/ctrl.settings.js"></script>
+    <script src="../assets/js/functions/ctrl.product.js"></script>
+    <script src="../assets/js/functions/ctrl.delivery.js"></script>
+    <script src="../assets/js/functions/ctrl.sales.js"></script>
+    <script src="../assets/js/chart/Chart.min.js"></script>
+    <script src="../assets/js/chart/angular-chart.min.js"></script>
+
+</body>
+
+</html>
